@@ -2,10 +2,10 @@
 
 ## Miembros del grupo LX-XXX-X (sustituir)
 
-1. Apellidos, Nombre
-1. Apellidos, Nombre
-1. Apellidos, Nombre
-1. Apellidos, Nombre
+1. Pareja Buzón, José Alberto
+2. Pérez Hermo, Javier
+3. Rosado Alba, Hugo
+
 
 ## 1. Introducción al problema
 
