@@ -6,10 +6,9 @@
 2. Pérez Hermo, Javier
 3. Rosado Alba, Hugo
 
-
 ## 1. Introducción al problema
 
-- Descripción del problema para poner en contexto el proyecto, incluyendo información sobre los clientes y usuarios, la situación actual, problemas, expectativas, etc. Se valorará la presencia de información multimedia (fotos, gráficos, documentos escaneados, etc.).
+Se trata de un bot automatizado, capaz de interactuar con uno o varios brokers, donde su función es, con el patrimonio de los usuarios (que estos serán regulados y tendrán un límite), comprar acciones a un precio bajo y venderlas cuando estén a un precio relativamente alto, el bot será capaz, mediante cálculos estadísticos como medias móviles, medias ponderadas, normalizando pérdidas y ganancias en una escala del 0 al 100, ***SEGUIR HACIENDOLO MEDIANTE EL DOCUMENTO DE GUDNOTES***
 
 ## 2. Glosario de términos
 
