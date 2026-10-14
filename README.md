@@ -8,7 +8,8 @@
 
 ## 1. Introducción al problema
 
-Se trata de un bot automatizado, capaz de interactuar con uno o varios brokers, donde su función es, con el patrimonio de los usuarios (que estos serán regulados y tendrán un límite), comprar acciones a un precio bajo y venderlas cuando estén a un precio relativamente alto, el bot será capaz, mediante cálculos estadísticos como medias móviles, medias ponderadas, normalizando pérdidas y ganancias en una escala del 0 al 100, ***SEGUIR HACIENDOLO MEDIANTE EL DOCUMENTO DE GUDNOTES***
+6/8 entidades.
+
 
 ## 2. Glosario de términos
 
