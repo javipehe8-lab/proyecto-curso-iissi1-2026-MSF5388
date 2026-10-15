@@ -20,64 +20,22 @@ Los clientes son los que rentan los coches, los usuarios son los que usan la apl
 
 ## 2. Glosario de términos
 
-Admin: Usuario de la aplicación que se encarga de gestionar los datos del sistema.
 
-Antigüedad: Clasificación de un vehículo según su edad. Puede ser antiguo, promedio o nuevo.
-
-Carné de conducir: Permiso de conducción del cliente. Es obligatorio tenerlo para poder rentar un vehículo.
-
-Catálogo: Conjunto de vehículos que rentingUS ofrece para rentar.
-
-Cliente: Persona que renta vehículos a través de rentingUS. De cada cliente se guarda su DNI, nombre, apellidos (el segundo es opcional), carné de conducir y fecha de nacimiento.
-
-Contrato: Acuerdo que firma un cliente para rentar entre uno y tres vehículos. Indica la fecha en que se firmó, la fecha en que expira, la tarifa elegida y el tipo de seguro contratado.
-
-Daño en el vehículo: Incidencia en la que el vehículo resulta dañado, por ejemplo en un accidente. Se indica qué zona del vehículo se ha visto afectada.
-
-Gravedad: Nivel de importancia de una incidencia. Puede ser leve, moderada o grave.
-
-Incidencia: Suceso del que el cliente es responsable y que notifica a través de la aplicación, como una multa o un daño en el vehículo. Se registra la fecha en que ocurrió, su gravedad y una descripción.
-
-Matrícula: Identificador oficial y único de cada vehículo.
-
-Modelo: Marca y versión concreta de un vehículo, por ejemplo un Seat Ibiza.
-
-Multa: Incidencia por una sanción de tráfico recibida mientras el cliente tiene el vehículo rentado.
-
-Pieza cambiada: Registro de una pieza sustituida en un vehículo. Se guarda qué pieza fue, en qué fecha se cambió y en qué lugar.
 
 Renting: Alquiler de un vehículo durante uno o varios años a cambio de una cuota fija, sin necesidad de comprarlo.
-
-Sanción: Castigo económico o de puntos que conlleva una multa.
-
-Sancionador: Organismo que impone la multa, por ejemplo un ayuntamiento.
-
-Seguro: Cobertura del vehículo que el cliente puede contratar junto con el renting. Puede ser ninguno, básico o completo, y su precio se suma a la cuota anual.
-
-Tarifa: Modalidad del contrato según su duración: anual, bienal o trienal. Existe además la tarifa Ultimate, que solo puede contratarse de forma anual.
-
-Tipo de vehículo: Categoría del vehículo. Puede ser moto, coche o helicóptero.
-
-Usuario: Persona que accede a la aplicación identificándose con su correo y contraseña. Puede ser administrador o cliente.
-
-Vehículo: Unidad que se renta, identificada por su matrícula. De cada vehículo se guarda su modelo, su tipo y su antigüedad.
 
 ## 3. Visión general del sistema
 
 ### 3.1. Requisitos generales
-RG-01 (Gestión de alquiler y contratos):
+RG-01 (Gestión de contratos):
 
 Como cliente, quiero contratar el renting anual, bienal o trienal de vehículos desde la aplicación móvil, para disfrutar de una tarifa plana de movilidad adaptada a mis necesidades sin ataduras a largo plazo.
 
-RG-02 (Gestión del catálogo y flota):
-
-Como administrador, quiero gestionar el catálogo global de vehículos y su disponibilidad, para mantener una oferta variada y actualizada de modelos para los usuarios.
-
-RG-03 (Notificación y gestión de incidencias):
+RG-02 (gestión de incidencias):
 
 Como cliente, quiero notificar y consultar las incidencias (multas y daños) de mis vehículos asignados a través de la aplicación, para realizar la gestión documental y asumir las responsabilidades asociadas de forma sencilla.
 
-RG-04 (Control de mantenimiento de vehículos):
+RG-03 (Control de mantenimiento de vehículos):
 
 Como administrador, quiero registrar el historial de reparaciones y piezas sustituidas en cada vehículo, para garantizar el correcto mantenimiento y la seguridad de la flota.
 
@@ -129,16 +87,6 @@ quiero obtener un listado de los contratos cuya fecha de expiración sea en los 
 para ofrecer a esos clientes la renovación con otro vehículo
 
 
-R.F.04. Listar vehículos disponibles
-Como administrador
-quiero obtener un listado de los vehículos del catálogo que no estén incluidos en ningún contrato vigente
-para saber qué vehículos se pueden ofrecer a los clientes
-
-Como administrador
-quiero consultar las piezas cambiadas de un vehículo a partir de su matrícula
-para conocer su estado y el mantenimiento que ha tenido
-
-
 R.F.05. Listar incidencias por gravedad
 Como administrador
 quiero obtener un listado de las incidencias filtradas por gravedad, indicando el cliente responsable
@@ -149,17 +97,17 @@ para dar prioridad a las incidencias más graves
 R.N.01 - Edad mínima:
 El cliente deberá de tener al menos 18 años
 
-R.N.02 - Renta mínima:
-El cliente deberá de disponer de una renta mínima establecida en el contrato en relación al vehículo a alquilar
+R.N.02 - Contrato con una cláusula de renta mínima:
+Se impedirá formalizar un contrato si la renta del cliente es menor de la establecida para dicho vehículo
 
 R.N.03 - Declarar incidencias:
 El cliente estará obligado a registrar las incidencias que pueda sufrir su vehículo rentado
 
 R.N.04 - Conductor único:
-La empresa no se encargará de daños producidos en el vehículo si estos fueron causados por una persona que no esté registrada en la póliza
+Si el DNI de la persona involucrada en el causante del incidente del vehículo es distinto al establecido en el contrato, se procederá al impago de los daños causados
 
 R.N.05 - Seguro obligatorio y tarifa dependiendo de la edad:
-Si el cliente tiene menos de 25 años o menos de 2 años de carnet, no podrá contratar un seguro básico, y se le cargará un importe extra por su experiencia en la conducción
+Si el cliente tiene menos de 25 años o menos de 2 años de carnet, no podrá contratar un seguro básico
 
 
 
