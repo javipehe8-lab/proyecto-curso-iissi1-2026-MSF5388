@@ -65,6 +65,23 @@ Vehículo: Unidad que se renta, identificada por su matrícula. De cada vehícul
 ## 3. Visión general del sistema
 
 ### 3.1. Requisitos generales
+RG-01 (Gestión de alquiler y contratos):
+
+Como cliente, quiero contratar el renting anual, bienal o trienal de vehículos desde la aplicación móvil, para disfrutar de una tarifa plana de movilidad adaptada a mis necesidades sin ataduras a largo plazo.
+
+RG-02 (Gestión del catálogo y flota):
+
+Como administrador, quiero gestionar el catálogo global de vehículos y su disponibilidad, para mantener una oferta variada y actualizada de modelos para los usuarios.
+
+RG-03 (Notificación y gestión de incidencias):
+
+Como cliente, quiero notificar y consultar las incidencias (multas y daños) de mis vehículos asignados a través de la aplicación, para realizar la gestión documental y asumir las responsabilidades asociadas de forma sencilla.
+
+RG-04 (Control de mantenimiento de vehículos):
+
+Como administrador, quiero registrar el historial de reparaciones y piezas sustituidas en cada vehículo, para garantizar el correcto mantenimiento y la seguridad de la flota.
+
+
 
 ### 3.2. Usuarios del sistema
 
