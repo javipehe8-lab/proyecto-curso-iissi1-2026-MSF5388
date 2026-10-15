@@ -85,6 +85,10 @@ Como administrador, quiero registrar el historial de reparaciones y piezas susti
 
 ### 3.2. Usuarios del sistema
 
+Usuario: cualquier entidad que se registre en el sistema de información
+Cliente: persona física o entidad que haya firmado un contrato de arrendamiento para un vehículo
+Administrador: persona o entidad que tenga acceso a los datos de todos los usuarios y pueda modificar el sistema de información
+
 ## 4. Catálogo de requisitos
 
 ### 4.1. Requisitos funcionales
