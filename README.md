@@ -35,6 +35,11 @@ RG-03 (Control de mantenimiento de vehículos):
 
 Como administrador, quiero registrar el historial de reparaciones y piezas sustituidas en cada vehículo, para garantizar el correcto mantenimiento y la seguridad de la flota.
 
+RG-04 (Gestión de usuario):
+
+Como cliente, quiero registrarme en la plataforma y autenticarme mediante credenciales individuales, para acceder de forma personal y segura a la contratación de vehículos y al historial de mis contratos.
+
+Como administrador, quiero gestionar las cuentas de usuario y controlar sus permisos, para garantizar la seguridad del sistema y restringir las funciones administrativas únicamente al personal autorizado.
 
 
 ### 3.2. Usuarios del sistema
@@ -100,10 +105,11 @@ R.N.03 - Declarar incidencias:
 El cliente estará obligado a registrar las incidencias que pueda sufrir su vehículo rentado
 
 R.N.04 - Conductor único:
-Si el DNI de la persona involucrada en el causante del incidente del vehículo es distinto al establecido en el contrato, se procederá al impago de los daños causados
+Si el DNI de la persona involucrada en el causante del incidente es distinto al establecido en el contrato, se procederá al impago de los daños causados
 
 R.N.05 - Seguro obligatorio y tarifa dependiendo de la edad:
 Si el cliente tiene menos de 25 años o menos de 2 años de carnet, no podrá contratar un seguro básico
+
 
 
 
