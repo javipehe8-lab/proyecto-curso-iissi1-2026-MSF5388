@@ -147,6 +147,22 @@ para dar prioridad a las incidencias más graves
 
 #### 4.1.2. Reglas de negocio
 
+RN01 - Edad mínima:
+El cliente deberá de tener al menos 18 años
+
+RN02 - Renta mínima:
+El cliente deberá de disponer de una renta mínima establecida en el contrato en relación al vehículo a alquilar
+
+RN03 - Declarar incidencias:
+EL cliente estará obligado a registrar las incidencias que pueda sufrir su vehículo rentado
+
+RN04 - Conductor único:
+La empresa no se encargará de daños producidos en el vehículo si estos fueron causados por una persona que no esté registrada en la póliza
+
+RN
+
+
+
 ##### R.N.01. Título regla negocio
 
 Descripción de la regla de negocio.
