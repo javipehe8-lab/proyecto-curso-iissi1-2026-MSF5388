@@ -147,19 +147,19 @@ para dar prioridad a las incidencias más graves
 
 #### 4.1.2. Reglas de negocio
 
-RN01 - Edad mínima:
+R.N.01 - Edad mínima:
 El cliente deberá de tener al menos 18 años
 
-RN02 - Renta mínima:
+R.N.02 - Renta mínima:
 El cliente deberá de disponer de una renta mínima establecida en el contrato en relación al vehículo a alquilar
 
-RN03 - Declarar incidencias:
-EL cliente estará obligado a registrar las incidencias que pueda sufrir su vehículo rentado
+R.N.03 - Declarar incidencias:
+El cliente estará obligado a registrar las incidencias que pueda sufrir su vehículo rentado
 
-RN04 - Conductor único:
+R.N.04 - Conductor único:
 La empresa no se encargará de daños producidos en el vehículo si estos fueron causados por una persona que no esté registrada en la póliza
 
-RN05 - Seguro obligatorio y tarifa dependiendo de la edad:
+R.N.05 - Seguro obligatorio y tarifa dependiendo de la edad:
 Si el cliente tiene menos de 25 años o menos de 2 años de carnet, no podrá contratar un seguro básico, y se le cargará un importe extra por su experiencia en la conducción
 
 
