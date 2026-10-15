@@ -8,7 +8,7 @@
 4. Antonio saldaña gonsale
 ## 1. Introducción al problema
 
-Los jóvenes hoy en día no tenemos tiempo para decidirnos por qué coche comprar, entonces... Porqué no probar uno cada año?
+Los jóvenes hoy en día no tenemos tiempo para decidirnos por qué coche comprar, entonces... ¿Porqué no probar uno cada año?
 En rentingUS podrás disfrutar por una tarifa plana de un renting anual de coches, eligiendo entre más de 30 modelos distintos!
 No tienes seguro? Nosotros nos encargamos de ello! Se te sumará a la cuota anual de forma sencilla y todos los pagos y gestiones de documentación se harán a través de la aplicación.
 
