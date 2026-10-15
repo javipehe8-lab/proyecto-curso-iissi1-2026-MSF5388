@@ -159,7 +159,8 @@ EL cliente estará obligado a registrar las incidencias que pueda sufrir su veh�
 RN04 - Conductor único:
 La empresa no se encargará de daños producidos en el vehículo si estos fueron causados por una persona que no esté registrada en la póliza
 
-RN
+RN05 - Seguro obligatorio y tarifa dependiendo de la edad:
+Si el cliente tiene menos de 25 años o menos de 2 años de carnet, no podrá contratar un seguro básico, y se le cargará un importe extra por su experiencia en la conducción
 
 
 
