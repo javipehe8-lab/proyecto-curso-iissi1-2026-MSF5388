@@ -20,7 +20,7 @@ Los clientes son los que rentan los coches, los usuarios son los que usan la apl
 
 ## 2. Glosario de términos
 
-Administrador: Usuario de la aplicación que se encarga de gestionar los datos del sistema.
+Admin: Usuario de la aplicación que se encarga de gestionar los datos del sistema.
 
 Antigüedad: Clasificación de un vehículo según su edad. Puede ser antiguo, promedio o nuevo.
 
