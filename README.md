@@ -20,7 +20,47 @@ Los clientes son los que rentan los coches, los usuarios son los que usan la apl
 
 ## 2. Glosario de términos
 
-- Términos específicos del dominio del problema, ordenados alfabéticamente. Se valorará la presencia de información multimedia.
+Administrador: Usuario de la aplicación que se encarga de gestionar los datos del sistema.
+
+Antigüedad: Clasificación de un vehículo según su edad. Puede ser antiguo, promedio o nuevo.
+
+Carné de conducir: Permiso de conducción del cliente. Es obligatorio tenerlo para poder rentar un vehículo.
+
+Catálogo: Conjunto de vehículos que rentingUS ofrece para rentar.
+
+Cliente: Persona que renta vehículos a través de rentingUS. De cada cliente se guarda su DNI, nombre, apellidos (el segundo es opcional), carné de conducir y fecha de nacimiento.
+
+Contrato: Acuerdo que firma un cliente para rentar entre uno y tres vehículos. Indica la fecha en que se firmó, la fecha en que expira, la tarifa elegida y el tipo de seguro contratado.
+
+Daño en el vehículo: Incidencia en la que el vehículo resulta dañado, por ejemplo en un accidente. Se indica qué zona del vehículo se ha visto afectada.
+
+Gravedad: Nivel de importancia de una incidencia. Puede ser leve, moderada o grave.
+
+Incidencia: Suceso del que el cliente es responsable y que notifica a través de la aplicación, como una multa o un daño en el vehículo. Se registra la fecha en que ocurrió, su gravedad y una descripción.
+
+Matrícula: Identificador oficial y único de cada vehículo.
+
+Modelo: Marca y versión concreta de un vehículo, por ejemplo un Seat Ibiza.
+
+Multa: Incidencia por una sanción de tráfico recibida mientras el cliente tiene el vehículo rentado.
+
+Pieza cambiada: Registro de una pieza sustituida en un vehículo. Se guarda qué pieza fue, en qué fecha se cambió y en qué lugar.
+
+Renting: Alquiler de un vehículo durante uno o varios años a cambio de una cuota fija, sin necesidad de comprarlo.
+
+Sanción: Castigo económico o de puntos que conlleva una multa.
+
+Sancionador: Organismo que impone la multa, por ejemplo un ayuntamiento.
+
+Seguro: Cobertura del vehículo que el cliente puede contratar junto con el renting. Puede ser ninguno, básico o completo, y su precio se suma a la cuota anual.
+
+Tarifa: Modalidad del contrato según su duración: anual, bienal o trienal. Existe además la tarifa Ultimate, que solo puede contratarse de forma anual.
+
+Tipo de vehículo: Categoría del vehículo. Puede ser moto, coche o helicóptero.
+
+Usuario: Persona que accede a la aplicación identificándose con su correo y contraseña. Puede ser administrador o cliente.
+
+Vehículo: Unidad que se renta, identificada por su matrícula. De cada vehículo se guarda su modelo, su tipo y su antigüedad.
 
 ## 3. Visión general del sistema
 
@@ -46,11 +86,89 @@ para [razón]
 
 #### 4.1.1. Requisitos de información
 
-##### R.I.01. Título requisito de información
+R.F.01. Consultar el catálogo de vehículos
 
-Como [tipo de usuario]
-quiero [servicio]
-para [razón]
+Como cliente
+quiero consultar los vehículos del catálogo y filtrarlos por modelo, tipo de vehículo y antigüedad
+para elegir el vehículo que quiero rentar
+
+Prueba de aceptación
+
+Sin filtros, se muestran todos los vehículos disponibles del catálogo con su modelo, tipo de vehículo y antigüedad.
+Al filtrar por un tipo de vehículo, solo aparecen vehículos de ese tipo.
+Si ningún vehículo cumple los filtros, se muestra un mensaje indicando que no hay resultados.
+Se debe aplicar la regla de negocio R.N.02.
+R.F.02. Consultar mis contratos
+
+Como cliente
+quiero consultar mis contratos con los vehículos que incluyen, la fecha de contrato, la fecha de expiración, la tarifa y el tipo de seguro
+para saber qué tengo rentado y hasta cuándo
+
+Prueba de aceptación
+
+Solo se muestran los contratos del cliente que ha iniciado sesión, nunca los de otros clientes.
+Cada contrato muestra entre uno y tres vehículos con su matrícula y modelo.
+Un cliente sin contratos ve un mensaje indicando que no tiene ningún contrato.
+Se debe aplicar la regla de negocio R.N.03.
+R.F.03. Consultar mis incidencias
+
+Como cliente
+quiero consultar las incidencias que he registrado, con su fecha, gravedad, descripción y si son una multa o un daño en el vehículo
+para tener controladas las incidencias de las que soy responsable
+
+Prueba de aceptación
+
+Solo se muestran las incidencias del cliente que ha iniciado sesión, ordenadas de la más reciente a la más antigua.
+Las multas muestran la sanción y el sancionador; los daños en el vehículo muestran la zona afectada.
+Al filtrar por gravedad “grave”, solo aparecen incidencias graves.
+Un cliente sin incidencias ve un mensaje indicando que no tiene ninguna.
+R.F.04. Listar contratos próximos a expirar
+
+Como administrador
+quiero obtener un listado de los contratos cuya fecha de expiración sea en los próximos 30 días
+para ofrecer a esos clientes la renovación con otro vehículo
+
+Prueba de aceptación
+
+Un contrato que expira dentro de 15 días aparece en el listado.
+Un contrato que expira dentro de 45 días no aparece.
+Un contrato ya expirado no aparece.
+El listado está ordenado por fecha de expiración, de la más próxima a la más lejana, e incluye el cliente y los vehículos de cada contrato.
+R.F.05. Listar vehículos disponibles
+
+Como administrador
+quiero obtener un listado de los vehículos del catálogo que no estén incluidos en ningún contrato vigente
+para saber qué vehículos se pueden ofrecer a los clientes
+
+Prueba de aceptación
+
+Un vehículo que nunca ha estado en un contrato aparece en el listado.
+Un vehículo incluido en un contrato vigente no aparece.
+Un vehículo cuyo contrato ya ha expirado vuelve a aparecer.
+Se debe aplicar la regla de negocio R.N.02.
+R.F.06. Consultar el historial de piezas de un vehículo
+
+Como administrador
+quiero consultar las piezas cambiadas de un vehículo a partir de su matrícula
+para conocer su estado y el mantenimiento que ha tenido
+
+Prueba de aceptación
+
+Al introducir una matrícula, se muestran sus piezas cambiadas con fecha, nombre de la pieza y lugar del cambio, ordenadas por fecha.
+Un vehículo sin piezas cambiadas muestra un mensaje indicando que no tiene historial.
+Al introducir una matrícula que no existe, se muestra un mensaje de error.
+R.F.07. Listar incidencias por gravedad
+
+Como administrador
+quiero obtener un listado de las incidencias filtradas por gravedad, indicando el cliente responsable
+para dar prioridad a las incidencias más graves
+
+Prueba de aceptación
+
+Al filtrar por “grave”, solo aparecen incidencias graves.
+Cada incidencia muestra el DNI y el nombre del cliente que la registró.
+El listado se puede filtrar por tipo de incidencia: multa o daño en el vehículo.
+Si no hay incidencias con la gravedad elegida, se muestra un mensaje indicando que no hay resultados.
 
 **Prueba de aceptación**
 - Descripción de la primera comprobación a realizar
