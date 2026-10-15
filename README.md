@@ -9,8 +9,8 @@
 ## 1. Introducción al problema
 
 Los jóvenes hoy en día no tenemos tiempo para decidirnos por qué coche comprar, entonces... ¿Porqué no probar uno cada año?
-En rentingUS podrás disfrutar por una tarifa plana de un renting anual de coches, eligiendo entre más de 30 modelos distintos!
-No tienes seguro? Nosotros nos encargamos de ello! Se te sumará a la cuota anual de forma sencilla y todos los pagos y gestiones de documentación se harán a través de la aplicación.
+¡En rentingUS podrás disfrutar por una tarifa plana de un renting anual de coches, eligiendo entre más de 30 modelos distintos!
+¿No tienes seguro? Nosotros nos encargamos de ello! Se te sumará a la cuota anual de forma sencilla y todos los pagos y gestiones de documentación se harán a través de la aplicación.
 
 Los clientes son los que rentan los coches, los usuarios son los que usan la aplicación. Hay un usuario administrador y un usuario cliente. Actualmente tenemos 32 modelos distintos de vehiculos que cualquier conductor puede rentar de forma anual bienal o trienal, con su respectiva tarifa cada uno. [Tambien disponemos de la tarifa Ultimate, exclusivamente anual]. Un cliente puede tener en su tarifa hasta 3 vehículos rentados simultáneamente en su tarifa. Los clientes son responsables de las incidencias sufridas ya sean multas o accidentes, las cuales se notificarán en la aplicación.
 
