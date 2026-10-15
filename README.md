@@ -109,88 +109,37 @@ Como cliente
 quiero consultar los vehículos del catálogo y filtrarlos por modelo, tipo de vehículo y antigüedad
 para elegir el vehículo que quiero rentar
 
-Prueba de aceptación
-
-Sin filtros, se muestran todos los vehículos disponibles del catálogo con su modelo, tipo de vehículo y antigüedad.
-Al filtrar por un tipo de vehículo, solo aparecen vehículos de ese tipo.
-Si ningún vehículo cumple los filtros, se muestra un mensaje indicando que no hay resultados.
-Se debe aplicar la regla de negocio R.N.02.
-R.F.02. Consultar mis contratos
+R.F.02. Consultar contratos
 
 Como cliente
 quiero consultar mis contratos con los vehículos que incluyen, la fecha de contrato, la fecha de expiración, la tarifa y el tipo de seguro
-para saber qué tengo rentado y hasta cuándo
+para saber qué vehiculos tengo rentados y hasta cuándo
 
-Prueba de aceptación
-
-Solo se muestran los contratos del cliente que ha iniciado sesión, nunca los de otros clientes.
-Cada contrato muestra entre uno y tres vehículos con su matrícula y modelo.
-Un cliente sin contratos ve un mensaje indicando que no tiene ningún contrato.
-Se debe aplicar la regla de negocio R.N.03.
 R.F.03. Consultar mis incidencias
 
 Como cliente
 quiero consultar las incidencias que he registrado, con su fecha, gravedad, descripción y si son una multa o un daño en el vehículo
 para tener controladas las incidencias de las que soy responsable
 
-Prueba de aceptación
-
-Solo se muestran las incidencias del cliente que ha iniciado sesión, ordenadas de la más reciente a la más antigua.
-Las multas muestran la sanción y el sancionador; los daños en el vehículo muestran la zona afectada.
-Al filtrar por gravedad “grave”, solo aparecen incidencias graves.
-Un cliente sin incidencias ve un mensaje indicando que no tiene ninguna.
-R.F.04. Listar contratos próximos a expirar
-
 Como administrador
 quiero obtener un listado de los contratos cuya fecha de expiración sea en los próximos 30 días
 para ofrecer a esos clientes la renovación con otro vehículo
 
-Prueba de aceptación
-
-Un contrato que expira dentro de 15 días aparece en el listado.
-Un contrato que expira dentro de 45 días no aparece.
-Un contrato ya expirado no aparece.
-El listado está ordenado por fecha de expiración, de la más próxima a la más lejana, e incluye el cliente y los vehículos de cada contrato.
 R.F.05. Listar vehículos disponibles
 
 Como administrador
 quiero obtener un listado de los vehículos del catálogo que no estén incluidos en ningún contrato vigente
 para saber qué vehículos se pueden ofrecer a los clientes
 
-Prueba de aceptación
-
-Un vehículo que nunca ha estado en un contrato aparece en el listado.
-Un vehículo incluido en un contrato vigente no aparece.
-Un vehículo cuyo contrato ya ha expirado vuelve a aparecer.
-Se debe aplicar la regla de negocio R.N.02.
-R.F.06. Consultar el historial de piezas de un vehículo
-
 Como administrador
 quiero consultar las piezas cambiadas de un vehículo a partir de su matrícula
 para conocer su estado y el mantenimiento que ha tenido
 
-Prueba de aceptación
-
-Al introducir una matrícula, se muestran sus piezas cambiadas con fecha, nombre de la pieza y lugar del cambio, ordenadas por fecha.
-Un vehículo sin piezas cambiadas muestra un mensaje indicando que no tiene historial.
-Al introducir una matrícula que no existe, se muestra un mensaje de error.
 R.F.07. Listar incidencias por gravedad
 
 Como administrador
 quiero obtener un listado de las incidencias filtradas por gravedad, indicando el cliente responsable
 para dar prioridad a las incidencias más graves
-
-Prueba de aceptación
-
-Al filtrar por “grave”, solo aparecen incidencias graves.
-Cada incidencia muestra el DNI y el nombre del cliente que la registró.
-El listado se puede filtrar por tipo de incidencia: multa o daño en el vehículo.
-Si no hay incidencias con la gravedad elegida, se muestra un mensaje indicando que no hay resultados.
-
-**Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- ...
 
 #### 4.1.2. Reglas de negocio
 
