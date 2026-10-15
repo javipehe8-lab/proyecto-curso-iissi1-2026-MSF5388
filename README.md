@@ -5,7 +5,7 @@
 1. Pareja Buzón, José Alberto
 2. Pérez Hermo, Javier
 3. Rosado Alba, Hugo
-
+4. Antonio saldaña gonsale
 ## 1. Introducción al problema
 
 Los jóvenes hoy en día no tenemos tiempo para decidirnos por qué coche comprar, entonces... Porqué no probar uno cada año?
@@ -14,7 +14,8 @@ No tienes seguro? Nosotros nos encargamos de ello! Se te sumará a la cuota anua
 
 Los clientes son los que rentan los coches, los usuarios son los que usan la aplicación. Hay un usuario administrador y un usuario cliente. Actualmente tenemos 32 modelos distintos de vehiculos que cualquier conductor puede rentar de forma anual bienal o trienal, con su respectiva tarifa cada uno. [Tambien disponemos de la tarifa Ultimate, exclusivamente anual]. Un cliente puede tener en su tarifa hasta 3 vehículos rentados simultáneamente en su tarifa. Los clientes son responsables de las incidencias sufridas ya sean multas o accidentes, las cuales se notificarán en la aplicación.
 
-<img width="941" height="744" alt="IMG_0543" src="https://github.com/user-attachments/assets/1832bc94-1a72-4632-b3c7-65d5004bd1c6" />
+<img width="1170" height="936" alt="IMG_0546" src="https://github.com/user-attachments/assets/503561cc-c241-4b2e-ab2e-ed4b7000d8fb" />
+
 
 
 ## 2. Glosario de términos
