@@ -1,11 +1,11 @@
-# Título Proyecto
+# RentingUS
 
-## Miembros del grupo LX-XXX-X (sustituir)
+## Miembros del grupo
 
 1. Pareja Buzón, José Alberto
 2. Pérez Hermo, Javier
 3. Rosado Alba, Hugo
-4. Antonio saldaña gonsale
+4. Saldaña González, Héctor
 ## 1. Introducción al problema
 
 Los jóvenes hoy en día no tenemos tiempo para decidirnos por qué coche comprar, entonces... ¿Porqué no probar uno cada año?
