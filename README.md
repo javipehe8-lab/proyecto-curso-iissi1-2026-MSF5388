@@ -125,7 +125,7 @@ Como administrador
 quiero obtener un listado de los contratos cuya fecha de expiración sea en los próximos 30 días
 para ofrecer a esos clientes la renovación con otro vehículo
 
-R.F.05. Listar vehículos disponibles
+R.F.04. Listar vehículos disponibles
 
 Como administrador
 quiero obtener un listado de los vehículos del catálogo que no estén incluidos en ningún contrato vigente
@@ -135,7 +135,7 @@ Como administrador
 quiero consultar las piezas cambiadas de un vehículo a partir de su matrícula
 para conocer su estado y el mantenimiento que ha tenido
 
-R.F.07. Listar incidencias por gravedad
+R.F.05. Listar incidencias por gravedad
 
 Como administrador
 quiero obtener un listado de las incidencias filtradas por gravedad, indicando el cliente responsable
