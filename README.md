@@ -108,19 +108,18 @@ para [razón]
 #### 4.1.1. Requisitos de información
 
 R.F.01. Consultar el catálogo de vehículos
-
 Como cliente
 quiero consultar los vehículos del catálogo y filtrarlos por modelo, tipo de vehículo y antigüedad
 para elegir el vehículo que quiero rentar
 
-R.F.02. Consultar contratos
 
+R.F.02. Consultar contratos
 Como cliente
 quiero consultar mis contratos con los vehículos que incluyen, la fecha de contrato, la fecha de expiración, la tarifa y el tipo de seguro
 para saber qué vehiculos tengo rentados y hasta cuándo
 
-R.F.03. Consultar mis incidencias
 
+R.F.03. Consultar mis incidencias
 Como cliente
 quiero consultar las incidencias que he registrado, con su fecha, gravedad, descripción y si son una multa o un daño en el vehículo
 para tener controladas las incidencias de las que soy responsable
@@ -129,8 +128,8 @@ Como administrador
 quiero obtener un listado de los contratos cuya fecha de expiración sea en los próximos 30 días
 para ofrecer a esos clientes la renovación con otro vehículo
 
-R.F.04. Listar vehículos disponibles
 
+R.F.04. Listar vehículos disponibles
 Como administrador
 quiero obtener un listado de los vehículos del catálogo que no estén incluidos en ningún contrato vigente
 para saber qué vehículos se pueden ofrecer a los clientes
@@ -139,8 +138,8 @@ Como administrador
 quiero consultar las piezas cambiadas de un vehículo a partir de su matrícula
 para conocer su estado y el mantenimiento que ha tenido
 
-R.F.05. Listar incidencias por gravedad
 
+R.F.05. Listar incidencias por gravedad
 Como administrador
 quiero obtener un listado de las incidencias filtradas por gravedad, indicando el cliente responsable
 para dar prioridad a las incidencias más graves
