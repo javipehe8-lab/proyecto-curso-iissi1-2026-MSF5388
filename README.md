@@ -8,17 +8,20 @@
 4. Saldaña González, Héctor
 ## 1. Introducción al problema
 
-Los jóvenes hoy en día no tenemos tiempo para decidirnos por qué coche comprar, entonces... ¿Porqué no probar uno cada año?
-¡En rentingUS podrás disfrutar por una tarifa plana de un renting anual de coches, eligiendo entre más de 30 modelos distintos!
-¿No tienes seguro? Nosotros nos encargamos de ello! Se te sumará a la cuota anual de forma sencilla y todos los pagos y gestiones de documentación se harán a través de la aplicación.
+Los jóvenes de hoy en día no tenemos tiempo para decidirnos por qué coche comprar ni queremos ataduras a largo plazo. Entonces... ¿Por qué no probar uno cada año?
 
-Los clientes son los que rentan los coches, los usuarios son los que usan la aplicación. Hay un usuario administrador y un usuario cliente. Actualmente tenemos 32 modelos distintos de vehiculos que cualquier conductor puede rentar de forma anual bienal o trienal, con su respectiva tarifa cada uno. [Tambien disponemos de la tarifa Ultimate, exclusivamente anual]. Un cliente puede tener en su tarifa hasta 3 vehículos rentados simultáneamente en su tarifa. Los clientes son responsables de las incidencias sufridas ya sean multas o accidentes, las cuales se notificarán en la aplicación.
+En RentingUS podrás disfrutar, mediante una tarifa plana, de un renting anual de coches, eligiendo entre más de 30 modelos distintos. Nuestra aplicación permite gestionar todo el ciclo de vida del arrendamiento: desde la visualización del catálogo y contratación, hasta la gestión de documentación y seguros obligatorios, que se suman a la cuota anual de forma sencilla.
+
+Actualmente disponemos de un catálogo con 32 modelos de vehículos que cualquier conductor puede rentar en modalidad anual, bienal o trienal, cada una con su tarifa correspondiente, incluyendo una modalidad de tarifa Ultimate de exclusividad anual. Los clientes gestionan todos los pagos por la aplicación y son responsables de las incidencias (multas o accidentes), las cuales deben ser registradas directamente en el sistema.
+
 
 ## 2. Glosario de términos
 
+Incidencia: Evento negativo (clasificado estrictamente como multa o daño) que sufre un vehículo de la flota durante la vigencia de un contrato, y del cual el cliente titular debe hacerse responsable económicamente.
 
+Renting: Alquiler de un vehículo de nuestra flota durante uno o varios años a cambio de una cuota fija, sin transferencia de la propiedad del mismo al cliente.
 
-Renting: Alquiler de un vehículo durante uno o varios años a cambio de una cuota fija, sin necesidad de comprarlo.
+Tarifa Ultimate: Modalidad de renting premium y de disponibilidad exclusiva para contratos de periodicidad anual.
 
 ## 3. Visión general del sistema
 
