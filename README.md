@@ -50,150 +50,181 @@ Administrador.
 
 ## 4. Catálogo de requisitos
 
-### 4.1. Requisitos funcionales
+### 4.1. Requisitos de información y requisitos funcionales
 
-#### R.F.01. Título requisito funcional
+#### 4.1.1. Entidad: Cliente
 
-Como [tipo de usuario]
-quiero [servicio]
-para [razón]
+**R.I.01. Información de los clientes.** El sistema deberá almacenar la información de los clientes. De cada cliente se guardarán su DNI, su nombre, su primer apellido, su segundo apellido y su fecha de nacimiento. La edad del cliente no se almacenará, sino que se calculará a partir de su fecha de nacimiento.
 
-**Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- Se debe aplicar la regla de negocio R.N.XX.
-- ...
+**R.F.01.01. Consultar mi perfil.** Como cliente, quiero consultar los datos personales que tengo registrados, para comprobar que son correctos.
 
-#### 4.1.1. Requisitos de información
+Prueba de aceptación:
+Un cliente que ha iniciado sesión accede a su perfil y comprueba que el DNI mostrado coincide con el que facilitó al registrarse.
+Si se intenta acceder al perfil sin haber iniciado sesión, el sistema deniega el acceso.
 
-4.1.1 Entidad: CLIENTE
-R.I.01 Información del Cliente: El sistema deberá almacenar los datos de los clientes. Los atributos a guardar serán: DNI, Nombre, Apellidos, Renta Mensual (en euros), Fecha de nacimiento, Fecha de expedición del carnet de conducir, Usuario y Contraseña.
+**R.F.01.02. Listar clientes.** Como administrador, quiero obtener un listado de todos los clientes registrados, para tener control sobre la base de clientes.
 
-R.F.01.01. Consultar mi perfil. Como cliente quiero consultar mis datos personales introducidos para verificar que mi información (como la renta aportada) está correcta.
+Prueba de aceptación:
+Un administrador solicita el listado y comprueba que aparecen, al menos, el nombre, los apellidos y el DNI de cada cliente.
 
-Prueba de aceptación 1: Entrar al apartado perfil y comprobar que el DNI mostrado coincide con el registrado. (SÍ/NO)
+**R.F.01.03. Listar clientes menores de 25 años.** Como administrador, quiero filtrar a los clientes por edad, para identificar a aquellos que tienen limitado el tipo de seguro que pueden contratar.
 
-Prueba de aceptación 2: Intentar modificar la Renta Mensual sin estar logueado y recibir error de autenticación. (SÍ/NO)
+Prueba de aceptación:
+Un administrador aplica el filtro y comprueba que ninguno de los clientes mostrados tiene 25 años o más, calculando su edad a partir de su fecha de nacimiento.
 
-R.F.01.02. Listar clientes (Admin). Como administrador quiero obtener un listado de todos los clientes registrados para tener control sobre la base de usuarios.
+**R.F.01.04. Registrarse como cliente.** Como cliente, quiero registrarme en la aplicación facilitando mis datos personales, para poder formalizar contratos de renting.
 
-Prueba de aceptación 1: Ejecutar la consulta como Admin y verificar que la lista devuelve al menos los nombres y DNI. (SÍ/NO)
+Prueba de aceptación:
+Una persona mayor de edad introduce todos sus datos correctamente y el sistema crea su perfil de cliente.
+Una persona menor de 18 años intenta registrarse y el sistema rechaza el registro.
+Se debe aplicar la regla de negocio R.N.03.
 
-R.F.01.03. Listar clientes menores de 25 años. Como administrador quiero filtrar a los clientes por edad para identificar los perfiles con seguro limitado.
+#### 4.1.2. Entidad: Vehículo
 
-Prueba de aceptación 1: Filtrar la lista y verificar que ningún cliente mostrado tiene una fecha de nacimiento anterior al año en curso menos 25. (SÍ/NO)
+**R.I.02. Información de los vehículos.** El sistema deberá almacenar la información de los vehículos de la flota. De cada vehículo se guardarán su matrícula, su modelo, su color y su tipo, que podrá ser coche, moto u otro.
 
-R.F.01.04. Iniciar sesión. Como cliente quiero introducir mis credenciales para acceder a la aplicación.
+**R.F.02.01. Consultar el catálogo de vehículos.** Como cliente, quiero consultar los vehículos disponibles, para elegir el que deseo contratar.
 
-Prueba de aceptación 1: Introducir usuario y contraseña correctos y acceder a la portada. (SÍ/NO)
+Prueba de aceptación:
+Un cliente accede al catálogo y comprueba que se muestran el modelo, el color y la matrícula de cada vehículo.
+Un vehículo que tiene un contrato vigente no aparece como disponible.
 
-4.1.2 Entidad: VEHÍCULO
-R.I.02 Información de Vehículos: El sistema deberá almacenar los datos de la flota. Atributos: Matrícula, Modelo, Tipo de vehículo, Fecha de matriculación, Tarifa asignada (Anual/Bienal/Trienal/Ultimate), y listado de piezas cambiadas. (Nota: La "antigüedad" será una propiedad derivada de la Fecha de matriculación, no se guardará el número estático).
+**R.F.02.02. Filtrar el catálogo por tipo de vehículo.** Como cliente, quiero filtrar el catálogo por tipo de vehículo, para encontrar con mayor rapidez el que se ajusta a lo que busco.
 
-R.F.02.01. Consultar el catálogo de vehículos. Como cliente quiero listar los vehículos disponibles para elegir el que quiero rentar.
+Prueba de aceptación:
+Un cliente selecciona el tipo «moto» y comprueba que únicamente se muestran vehículos de ese tipo.
 
-Prueba de aceptación 1: Pulsar en catálogo y visualizar los 32 modelos con sus matrículas. (SÍ/NO)
+**R.F.02.03. Dar de alta un vehículo.** Como administrador, quiero registrar un nuevo vehículo en la flota, para incorporarlo al catálogo.
 
-R.F.02.02. Filtrar catálogo por tarifa. Como cliente quiero filtrar los vehículos por su tarifa (ej. Ultimate) para ver cuáles puedo permitirme.
+Prueba de aceptación:
+Un administrador introduce la matrícula, el modelo, el color y el tipo de un vehículo nuevo y comprueba que este aparece en el catálogo.
 
-Prueba de aceptación 1: Seleccionar filtro "Ultimate" y comprobar que solo se muestran vehículos con esa etiqueta. (SÍ/NO)
+**R.F.02.04. Consultar el historial de contratos de un vehículo.** Como administrador, quiero consultar todos los contratos que ha tenido un vehículo, para conocer su historial de uso.
 
-R.F.02.03. Listar historial de reparaciones. Como administrador quiero consultar las piezas cambiadas de una matrícula concreta para llevar el control de mantenimiento.
+Prueba de aceptación:
+Un administrador introduce una matrícula existente y comprueba que se muestran todos los contratos, vigentes y finalizados, asociados a ese vehículo.
 
-Prueba de aceptación 1: Introducir una matrícula existente y ver la lista de piezas sustituidas. (SÍ/NO)
+#### 4.1.3. Entidad: Contrato
 
-R.F.02.04. Listar vehículos por antigüedad. Como administrador quiero listar los vehículos ordenados por su antigüedad (derivada de la fecha de matriculación) para saber cuáles retirar de la flota.
+**R.I.03. Información de los contratos.** El sistema deberá almacenar los contratos de renting que un cliente formaliza sobre un vehículo. De cada contrato se guardarán su fecha de contrato, su fecha de expiración, su tipo (anual, bienal o trienal), su cuota y el tipo de seguro contratado (ninguno, básico o completo). Cada contrato corresponde a un único cliente y a un único vehículo.
 
-Prueba de aceptación 1: Comprobar que los coches matriculados en 2020 aparecen antes que los de 2024. (SÍ/NO)
+**R.F.03.01. Formalizar un contrato.** Como cliente, quiero contratar el renting de un vehículo eligiendo el tipo de contrato y de seguro, para disponer del vehículo durante el periodo acordado.
 
-4.1.3 Entidad: CONTRATO (Entidad asociativa Cliente-Vehículo)
-R.I.03 Información de los Contratos: El sistema almacenará los contratos que conectan un Cliente y un Vehículo. Atributos: ID Contrato, DNI Cliente (Clave foránea), Matrícula (Clave foránea), Fecha de Inicio, Fecha de Expiración, Tipo de Seguro contratado, Cuota final asignada.
+Prueba de aceptación:
+Un cliente selecciona un vehículo disponible, un tipo de contrato y un tipo de seguro, y el sistema registra el contrato con sus fechas y su cuota.
+Si el vehículo ya tiene un contrato cuyo periodo se solapa con el nuevo, el sistema rechaza la operación.
+Si el cliente tiene menos de 25 años y elige el seguro básico, el sistema rechaza la operación.
+Si el cliente ya tiene tres contratos vigentes, el sistema rechaza la operación.
+Si el cliente se encuentra bloqueado por acumulación de incidencias, el sistema rechaza la operación.
+Se deben aplicar las reglas de negocio R.N.01, R.N.02, R.N.04 y R.N.05.
 
-R.F.03.01. Consultar mis contratos. Como cliente quiero listar mis contratos vigentes para saber hasta cuándo tengo rentados mis vehículos actuales.
+**R.F.03.02. Consultar mis contratos.** Como cliente, quiero consultar mis contratos vigentes y mi historial de contratos finalizados, para saber hasta cuándo dispongo de cada vehículo y qué rentings he tenido.
 
-Prueba de aceptación 1: Entrar en "Mis Contratos" y comprobar que figuran las matrículas de los coches rentados. (SÍ/NO)
+Prueba de aceptación:
+Un cliente accede a sus contratos vigentes y comprueba que solo aparecen contratos cuya fecha de expiración es posterior a la fecha actual.
+Un cliente accede a su historial y comprueba que solo aparecen contratos cuya fecha de expiración ya ha pasado.
 
-R.F.03.02. Listar contratos a expirar en 30 días. Como administrador quiero listar los contratos cuya Fecha de Expiración sea en los próximos 30 días para ofrecer renovaciones.
+**R.F.03.03. Listar contratos próximos a expirar.** Como administrador, quiero listar los contratos cuya fecha de expiración se encuentre dentro de los próximos 30 días, para ofrecer su renovación a los clientes.
 
-Prueba de aceptación 1: Comprobar que en la lista resultante no aparece ningún contrato cuya fecha de expiración sea superior a 31 días vista. (SÍ/NO)
+Prueba de aceptación:
+Un administrador solicita el listado y comprueba que no aparece ningún contrato que expire dentro de más de 30 días ni ninguno que ya haya expirado.
 
-R.F.03.03. Listar historial de contratos finalizados. Como cliente quiero consultar los contratos cuya Fecha de Expiración ya pasó para tener un histórico de mis rentings.
+**R.F.03.04. Listar contratos por tipo de seguro.** Como administrador, quiero filtrar los contratos vigentes según el tipo de seguro contratado, para analizar los riesgos asumidos por la empresa.
 
-Prueba de aceptación 1: Filtrar por "Histórico" y ver solo contratos con fecha final anterior a la de hoy. (SÍ/NO)
+Prueba de aceptación:
+Un administrador filtra por seguro básico y comprueba que no aparece ningún contrato con otro tipo de seguro.
 
-R.F.03.04. Listar contratos por tipo de seguro. Como administrador quiero filtrar los contratos activos según su seguro (básico/premium) para análisis de riesgos.
+#### 4.1.4. Entidad: Incidencia
 
-Prueba de aceptación 1: Filtrar por "Seguro Básico" y verificar que la lista no incluye contratos premium. (SÍ/NO)
+**R.I.04. Información de las incidencias.** El sistema deberá almacenar las incidencias que se producen durante los contratos. De cada incidencia se guardarán su fecha, su gravedad (leve, moderada o alta) y una descripción de lo sucedido. Cada incidencia corresponde a un único contrato, y un contrato puede no tener ninguna incidencia o tener varias.
 
-4.1.4 Entidad: INCIDENCIA
-R.I.04 Información de Incidencias: El sistema almacenará los partes de daños y multas. Estos se asocian al Contrato (no al cliente suelto). Atributos: ID Incidencia, ID Contrato asociado (Clave Foránea), Fecha del suceso, Tipo (Multa / Daño), Gravedad, Descripción.
+**R.F.04.01. Registrar una incidencia.** Como cliente, quiero registrar una incidencia en uno de mis contratos, para notificar a la empresa lo sucedido con el vehículo.
 
-R.F.04.01. Consultar mis incidencias registradas. Como cliente quiero ver las incidencias conectadas a mis contratos para tener controladas mis responsabilidades.
+Prueba de aceptación:
+Un cliente registra una incidencia indicando su fecha, su gravedad y su descripción, y comprueba que queda asociada al contrato correspondiente.
+Se debe aplicar la regla de negocio R.N.05.
 
-Prueba de aceptación 1: Ingresar en incidencias y ver si coincide el ID Contrato con alguno de los míos. (SÍ/NO)
+**R.F.04.02. Consultar mis incidencias.** Como cliente, quiero consultar las incidencias asociadas a mis contratos, para tener controladas mis responsabilidades.
 
-R.F.04.02. Listar incidencias por gravedad. Como administrador quiero listar las incidencias filtradas por gravedad para dar prioridad a los accidentes graves.
+Prueba de aceptación:
+Un cliente accede a sus incidencias y comprueba que todas pertenecen a alguno de sus contratos.
 
-Prueba de aceptación 1: Seleccionar "Gravedad Alta" y verificar que las incidencias mostradas corresponden a ese filtro. (SÍ/NO)
+**R.F.04.03. Listar incidencias por gravedad.** Como administrador, quiero listar las incidencias filtradas por su gravedad, para dar prioridad a las más graves.
 
-R.F.04.03. Consultar incidencias de un coche. Como administrador quiero listar todas las incidencias introduciendo la matrícula de un coche (buscando a través de sus contratos).
+Prueba de aceptación:
+Un administrador selecciona la gravedad alta y comprueba que todas las incidencias mostradas tienen esa gravedad.
 
-Prueba de aceptación 1: Introducir una matrícula y ver el historial de incidencias que sufrieron los distintos contratos de ese vehículo. (SÍ/NO)
+**R.F.04.04. Consultar las incidencias de un vehículo.** Como administrador, quiero consultar todas las incidencias de un vehículo a partir de su matrícula, para conocer su historial de daños y multas.
 
-R.F.04.04. Listar multas. Como administrador quiero separar las incidencias que sean exclusivamente de Tipo "Multa" para agilizar los trámites burocráticos.
+Prueba de aceptación:
+Un administrador introduce una matrícula y comprueba que se muestran las incidencias de todos los contratos que ha tenido ese vehículo.
 
-Prueba de aceptación 1: Filtrar por tipo "Multa" y verificar que no aparece ningún registro de "Daño" físico en la chapa. (SÍ/NO)
+#### 4.1.5. Entidad: Usuario
 
-#### 4.1.2. Reglas de negocio
+**R.I.05. Información de los usuarios.** El sistema deberá almacenar la información de todos los usuarios que acceden a la aplicación. De cada usuario se guardarán su correo electrónico y su contraseña. Todo usuario será, de forma exclusiva, cliente o administrador.
 
-R.N.01 - Límite de vehículos simultáneos: Un cliente solo podrá tener un máximo de 3 contratos vigentes (fecha de expiración superior a hoy) simultáneamente.
+**R.F.05.01. Iniciar sesión.** Como usuario, quiero introducir mi correo y mi contraseña, para acceder a la aplicación.
 
-R.N.02 - Contrato con cláusula de renta mínima: Se impedirá formalizar un contrato en la base de datos si el campo Renta Mensual del Cliente es inferior a la cuota establecida para la tarifa de ese vehículo.
+Prueba de aceptación:
+Un usuario introduce un correo y una contraseña correctos y accede a las funciones de su rol.
+Un usuario introduce una contraseña incorrecta y el sistema le deniega el acceso.
 
-R.N.03 - Incidencias en contratos vigentes: No se puede levantar ni registrar una incidencia asociándola a un ID Contrato cuya Fecha de expiración sea anterior a la fecha del suceso. (La incidencia va sobre contrato conectado y vigente).
+**R.F.05.02. Cerrar sesión.** Como usuario, quiero cerrar mi sesión, para que nadie pueda utilizar mi cuenta desde el dispositivo.
 
-R.N.04 - Seguro obligatorio por edad/experiencia: Si la edad calculada del cliente es menor a 25 años, o la diferencia entre la fecha actual y la Fecha de expedición del carnet es menor a 2 años, el sistema no permitirá asociar el "Seguro Básico" al contrato.
+Prueba de aceptación:
+Tras cerrar sesión, el usuario intenta acceder a una sección privada y el sistema le solicita de nuevo sus credenciales.
 
-R.N.05 - Antigüedad derivada: El sistema nunca almacenará un número fijo para los años del vehículo. La antigüedad debe ser extraída dinámicamente restando la Fecha de matriculación a la fecha actual del servidor.
+**R.F.05.03. Cambiar mi contraseña.** Como usuario, quiero modificar mi contraseña, para mantener la seguridad de mi cuenta.
 
-Pruebas de aceptación de reglas de negocio:
+Prueba de aceptación:
+Un usuario cambia su contraseña y comprueba que solo puede iniciar sesión con la nueva.
 
-Prueba R.N.03: Intentar insertar en la tabla Incidencia un parte de accidente asociándolo a un ID Contrato que terminó hace dos meses.
+**R.F.05.04. Cambiar mi correo electrónico.** Como usuario, quiero modificar mi correo electrónico, para mantener actualizados mis datos de acceso.
 
-Comprobación: El sistema de base de datos (Trigger) debe abortar la operación y lanzar un error indicando que el contrato ha expirado. (SÍ/NO)
+Prueba de aceptación:
+Un usuario cambia su correo y comprueba que puede iniciar sesión con el nuevo y no con el anterior.
 
-Prueba R.N.01: Un cliente con 3 contratos vigentes intenta firmar el cuarto mediante la App.
+#### 4.1.6. Entidad: Administrador
 
-Comprobación: El sistema bloquea la transacción y muestra el mensaje de límite alcanzado. (SÍ/NO)
+**R.I.06. Información de los administradores.** El sistema deberá almacenar, además de los datos comunes a todo usuario, el token de administrador de cada administrador.
 
+**R.F.06.01. Acceder como administrador.** Como administrador, quiero introducir mi token además de mis credenciales, para acceder a las funciones de gestión.
 
-##### R.N.01. Título regla negocio
+Prueba de aceptación:
+Un administrador introduce su correo, su contraseña y su token correctos y accede al panel de gestión.
+Un administrador introduce un token incorrecto y el sistema le deniega el acceso al panel.
 
-Descripción de la regla de negocio.
+**R.F.06.02. Dar de alta un administrador.** Como administrador, quiero registrar a un nuevo administrador, para incorporar a otro empleado a la gestión de la plataforma.
 
-### 4.2. Mapa de historias de usuario (opcional)
+Prueba de aceptación:
+Un administrador registra a un nuevo administrador y este puede acceder al panel con sus credenciales y su token.
 
-### 4.3. Requisitos no funcionales (opcional)
+**R.F.06.03. Listar administradores.** Como administrador, quiero consultar el listado de administradores, para saber quién tiene acceso a la gestión de la plataforma.
 
-**R.N.F. 01. Título requisito no funcional**
-Como [tipo de usuario]
-quiero [servicio]
-para [razón]
+Prueba de aceptación:
+Un administrador solicita el listado y comprueba que aparecen todos los administradores registrados y ningún cliente.
 
-R.N.F. 01. Rendimiento del catálogo: Como usuario, quiero que la lista de catálogo de vehículos cargue desde la base de datos en menos de 3 segundos, para tener una experiencia fluida al buscar coche.
+**R.F.06.04. Dar de baja a un administrador.** Como administrador, quiero dar de baja a otro administrador, para retirar el acceso a quien ya no deba tenerlo.
 
-Comprobación: Medir el tiempo de respuesta del servidor al hacer SELECT de la tabla Vehículos. (SÍ/NO).
+Prueba de aceptación:
+Tras dar de baja a un administrador, este intenta acceder al panel y el sistema se lo impide.
 
-R.N.F. 02. Disponibilidad del gestor de incidencias: Como cliente, quiero que el módulo para subir incidencias esté disponible el 99% del tiempo, para no incurrir en demoras legales tras un accidente o multa de tráfico.
+### 4.2. Reglas de negocio
 
+**R.N.01. Contratos sin solapamiento.** Un vehículo no podrá tener dos contratos cuyos periodos, comprendidos entre la fecha de contrato y la fecha de expiración, se solapen.
 
+**R.N.02. Seguro básico limitado por edad.** Un contrato no podrá tener el seguro básico si el cliente titular tiene menos de 25 años en la fecha del contrato, calculando su edad a partir de su fecha de nacimiento.
 
+**R.N.03. Mayoría de edad.** Todo cliente deberá tener al menos 18 años en el momento de su registro, calculando su edad a partir de su fecha de nacimiento.
 
--- fin entregable 1 --
+**R.N.04. Límite de contratos vigentes.** Un cliente no podrá tener más de tres contratos vigentes de forma simultánea.
+
+**R.N.05. Bloqueo por acumulación de incidencias.** Cuando un contrato acumule al menos una incidencia de gravedad alta, tres de gravedad moderada, cinco de gravedad leve, o dos moderadas y dos leves, el cliente titular no podrá formalizar nuevos contratos ni renovar los existentes.
+
 
 ## 5. Modelo conceptual
 
-<img width="1170" height="936" alt="IMG_0546" src="https://github.com/user-attachments/assets/503561cc-c241-4b2e-ab2e-ed4b7000d8fb" />
+<img width="1321" height="1000" alt="Imagen JPEG-43D5-B5B1-9A-0" src="https://github.com/user-attachments/assets/f9fc0eb0-4349-4f82-9c23-d7c435df7cac" />
 
 ### 5.1. Diagramas de clases UML
 
