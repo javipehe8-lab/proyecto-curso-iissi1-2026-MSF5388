@@ -228,7 +228,8 @@ Tras dar de baja a un administrador, este intenta acceder al panel y el sistema 
 
 ### 5.1. Diagramas de clases UML
 
-- con restricciones.
+<img width="1208" height="437" alt="imagen" src="https://github.com/user-attachments/assets/7a9e5388-dcb6-4286-9a3f-3be9ef527b6e" />
+
 
 ### 5.2. Escenarios de prueba
 
