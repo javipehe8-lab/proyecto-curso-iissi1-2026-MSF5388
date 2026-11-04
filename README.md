@@ -233,7 +233,22 @@ Tras dar de baja a un administrador, este intenta acceder al panel y el sistema 
 
 ### 5.2. Escenarios de prueba
 
-- con descripción textual y diagrama de objetos UML.
+<img width="647" height="290" alt="imagen" src="https://github.com/user-attachments/assets/ad8ef7eb-51e1-4b14-b766-38f4e99305c0" />
+
+Descripción:
+El cliente Ram Altman tiene contratado el vehículo con matrícula 1234ABC mediante el contrato 1, vigente desde el 01/01/2026 hasta el 01/01/2027. Posteriormente, el cliente Dario Amodei intenta contratar ese mismo vehículo mediante el contrato 2, desde el 01/06/2026 hasta el 01/06/2027.
+El resultado es un estado no válido, ya que incumple la regla de negocio RN1 que impide el solapamiento que ocurre en este ejemplo, y por tanto el sistema debe impedir que se registre el contrato 2.
+
+<img width="406" height="309" alt="imagen" src="https://github.com/user-attachments/assets/6b66926e-9cfe-44b7-831e-88db16ce4e82" />
+
+Descripción:
+El cliente Antonio Lobato, nacido en el 14/02/1995, tiene contratado un Lamborghini Veneno con seguro básico y el vehículo sufre una incidencia leve. 
+Es válido ya que su fecha de nacimiento cumple con la RN02 sobre la edad mínima para seguro básico. Es su único contrato vigente RN04, el vehículo no tiene otro contrato con el que se solape RN01 y una única incidencia leve no alcanza el umbral de RN05.
+
+<img width="394" height="352" alt="imagen" src="https://github.com/user-attachments/assets/10ae7dd9-313b-49aa-8c66-91ac2ec80911" />
+
+Descripción: El cliente Cristóbal Soria, nacido el 10/05/2003, contrata el vehículo mediante el contrato anual ct2, desde el 01/09/2026 hasta el 01/09/2027, eligiendo el seguro básico.
+Estado no válido. En la fecha del contrato Cristóbal Soria tiene 23 años, por lo que no puede contratar el seguro básico. Incumple la regla de negocio RN02 por lo que el sistema debe impedir que se registre el contrato ct2 con ese tipo de seguro.
 
 ## 6. Matrices de trazabilidad
 
