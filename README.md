@@ -17,11 +17,7 @@ Actualmente disponemos de un catálogo con 32 modelos de vehículos que cualquie
 
 ## 2. Glosario de términos
 
-Incidencia: Evento negativo (clasificado estrictamente como multa o daño) que sufre un vehículo de la flota durante la vigencia de un contrato, y del cual el cliente titular debe hacerse responsable económicamente.
-
-Renting: Alquiler de un vehículo de nuestra flota durante uno o varios años a cambio de una cuota fija, sin transferencia de la propiedad del mismo al cliente.
-
-Tarifa Ultimate: Modalidad de renting premium y de disponibilidad exclusiva para contratos de periodicidad anual.
+tokenAdministrador: Es un token de acceso que se les solicita a los administradores para verificar su condición de administrador.
 
 ## 3. Visión general del sistema
 
@@ -39,16 +35,18 @@ RG-03 (Control de mantenimiento de vehículos):
 Como administrador, quiero registrar el historial de reparaciones y piezas sustituidas en cada vehículo, para garantizar el correcto mantenimiento y la seguridad de la flota.
 
 RG-04 (Gestión de cliente):
+
 Como administrador, quiero gestionar los perfiles de los usuarios que se registran, para validar su viabilidad económica y legal.
+
+RG-05 (Inicio de sesión de usuarios):
+
+Como usuario, quiero poder acceder con mis credenciales a mi información relacionada con RentingUS, para comprobar el estado del contrato y incidencias registradas.
 
 
 ### 3.2. Usuarios del sistema
 
-Usuario: cualquier entidad que se registre en el sistema de información
-
-Cliente: Persona física que se registra en el sistema, aporta sus datos económicos (renta) y de conducción, y formaliza contratos de arrendamiento de vehículos.
-
-Administrador: Persona empleada por RentingUS con acceso privilegiado al sistema para gestionar el catálogo de vehículos, revisar mantenimientos, controlar el estado de los contratos e incidencias globales.
+Cliente.
+Administrador.
 
 ## 4. Catálogo de requisitos
 
