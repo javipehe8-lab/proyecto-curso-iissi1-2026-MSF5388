@@ -219,7 +219,7 @@ Tras dar de baja a un administrador, este intenta acceder al panel y el sistema 
 
 **R.N.04. Límite de contratos vigentes.** Un cliente no podrá tener más de tres contratos vigentes de forma simultánea.
 
-**R.N.05. Bloqueo por acumulación de incidencias.** Cuando un contrato acumule al menos una incidencia de gravedad alta, tres de gravedad moderada, cinco de gravedad leve, o dos moderadas y dos leves, el cliente titular no podrá formalizar nuevos contratos ni renovar los existentes.
+**R.N.05. Bloqueo por acumulación de incidencias.** Cuando un contrato acumule o una incidencia de gravedad alta, o tres de gravedad moderada, o cinco de gravedad leve, o dos moderadas y dos leves, el cliente titular no podrá formalizar nuevos contratos ni renovar los existentes.
 
 
 ## 5. Modelo conceptual
