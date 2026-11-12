@@ -5,7 +5,7 @@
 1. Pareja Buzón, José Alberto
 2. Pérez Hermo, Javier
 3. Rosado Alba, Hugo
-4. Saldaña González, Héctor
+
 ## 1. Introducción al problema
 
 Los jóvenes de hoy en día no tenemos tiempo para decidirnos por qué coche comprar ni queremos ataduras a largo plazo. Entonces... ¿Por qué no probar uno cada año?
@@ -296,8 +296,14 @@ Estado no válido. En la fecha del contrato Cristóbal Soria tiene 23 años, por
 -- fin entregable 2 --
 
 ## 7. Modelo relacional en 3FN
+Usuario(!id, #correo, contraseña)
 
-- Relaciones obtenidas al aplicar la transformación del modelo conceptual.
+Administrador(!id, @usuarioId, tokenAdministrador)
+
+Cliente(!id, @usuarioId, #dni, #(nombre, apellido1, apellido2), fechaNacimiento)
+
+
+
 
 ### 7.1.  Justificación de la estrategia de transformación de jerarquías
 
